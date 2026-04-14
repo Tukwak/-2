@@ -15,7 +15,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { title: "에어부산 자금 집행 최적화", role: "재무팀 인턴", desc: "오지급률 0% 기록 (월 1,500건)", fullDesc: "데일리 체크리스트를 도입하여 자금 집행 검증 단계를 구체화했습니다. 5개월간 월평균 1,500건 이상의 자금 집행 건수 중 오지급률 0%를 기록했습니다.", image: "https://picsum.photos/seed/airbusan1/800/600" },
+  { title: "에어부산 자금 집행 최적화", role: "재무팀 인턴", desc: "오지급률 0% 기록 (월 1,500건)", fullDesc: "데일리 체크리스트를 도입하여 자금 집행 검증 단계를 구체화했습니다. 5개월간 월평균 1,500건 이상의 자금 집행 건수 중 오지급률 0%를 기록했습니다.", image: "https://github.com/Tukwak/-2/blob/b2d58253849f04b76c0cdc5a98386b419950c39f/%EC%97%90%EC%96%B4%EB%B6%80%EC%82%B0.jpg?raw=true" },
   { title: "에어부산 신규 노선 검토", role: "전략경영팀", desc: "시장 데이터 시각화 및 분석 체계 마련", fullDesc: "방대한 시장 데이터를 경영진이 빠르게 판단할 수 있도록 직관적 지표로 시각화했습니다. 노선별 마진 및 시장 공급 추이 데이터 정제를 통해 전략 수립의 근거를 제공했습니다.", image: "https://picsum.photos/seed/airbusan2/800/600" },
   { title: "현대중공업 프로세스 개선", role: "인사총무팀 인턴", desc: "공용 양식 도입으로 협업 효율 증대", fullDesc: "부서별 상이했던 회의 자료 양식을 통일하기 위해 '공용 양식 초안'을 제안하고 배포했습니다. 자료 취합 시 발생하는 시간 지연 문제를 해결하여 유관 부서 만족도를 증대시켰습니다.", image: "https://picsum.photos/seed/hhi/800/600" },
   { title: "H-점프스쿨 콘텐츠 혁신", role: "멘토", desc: "수업 참여 희망 인원 75% 증가", fullDesc: "일방향 수업에서 프로젝트형 수업('나만의 캐릭터 이야기 만들기')으로 전환하여 참여도를 극대화했습니다. 수업 참여 희망 인원이 기존 4명에서 7명으로 75% 증가했습니다.", image: "https://picsum.photos/seed/jumpschool/800/600" }
@@ -67,7 +67,7 @@ export default function App() {
         <h2 className="text-3xl font-bold mb-12 tracking-tight text-gray-900">대표 프로젝트</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm cursor-pointer hover:shadow-md transition" onClick={() => setSelectedProject(p)}>
+            <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm cursor-pointer hover:shadow-md transition text-center" onClick={() => setSelectedProject(p)}>
               <img src={p.image} alt={p.title} className="w-full h-48 object-cover rounded-xl mb-4" referrerPolicy="no-referrer" />
               <h3 className="text-xl font-semibold mb-2 text-gray-900">{p.title}</h3>
               <p className="text-sm text-gray-500 mb-2">{p.role}</p>
